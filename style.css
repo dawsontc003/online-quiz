@@ -1,0 +1,12 @@
+.container {
+  align-content: center;
+  background-color: blue;
+}
+.section {
+  align-content: center;
+  padding-left: 20%;
+  width: 150%;
+}
+.text-left {
+  float: left;
+}

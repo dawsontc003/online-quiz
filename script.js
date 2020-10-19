@@ -1,206 +1,184 @@
- 
+// JavaScript function that wraps everything
+$(document).ready(function () {
+  // Targeting HTML class for user required action to start quiz
+  $(".rightwrongdisplay").text("Click here to Start!");
+  // Click listerner for targeted HTML class
+  $(".rightwrongdisplay").on("click", function () {
+    // Setting an interval timer with condition to run function when clock reaches zero
+    var timer2 = setInterval(function () {
+      $(".runTime").text("Timer:" + " " + timer--);
+      if (timer <= 0) {
+        clearInterval(timer2);
+        highScore();
+        return;
+      }
+    }, 1000);
+  });
 
-        // JavaScript function that wraps everything
-        $(document).ready(function () {
-            
-            
-            setInterval(function() {
-           $(".runTime").text((timer--));
-            }, 1000); 
+  // Declaring variables for score, user initials, and timer
+  var timer = 30;
+  var currentScore = 0;
+  var userInitials;
+  // variables for question 1
+  var question1 = "What does NBA stand for?";
+  var answer1a = "National Basketball Athletics";
+  var answer1b = "National Basketball Association";
+  var answer1c = "Natural Basketball Association";
+  var answer1d = "Natural Basketball Association";
+  var correctAnswer1 = answer1b;
 
-            
-            if (timer <= 0) {
-                alert("plugged in")
-            }
+  // Targeted HTML classes for displaying question 1
+  $(".card-header").text(question1);
+  $("#1-a").text(answer1a);
+  $("#1-b").text(answer1b);
+  $("#1-c").text(answer1c);
+  $("#1-d").text(answer1d);
 
-
-            // Declaring variables for score, user initials, and timer
-            var timer = 30;
-
-            var currentScore = 0;
-            var userInitials;
-            // variables for question 1
-            var question1 = "What does NBA stand for?";
-            var answer1a = "National Basketball Athletics";
-            var answer1b = "National Basketball Association";
-            var answer1c = "Natural Basketball Association";
-            var answer1d = "Natural Basketball Association";
-            var correctAnswer1 = answer1b;  
-
-
-                $(".card-header").text(question1)
-                $("#1-a").text(answer1a)
-                $("#1-b").text(answer1b)
-                $("#1-c").text(answer1c)
-                $("#1-d").text(answer1d)
-
-
-            
-
+  // Click listener for Answer a with fucntionality to remove additional time from set interval
   $(".answer-a-button").on("click", function () {
-             $(".rightwrongdisplay").text("Sorry!")
-                timer = (timer-10)
-                console.log("wrong")
-            });
-
+    $(".rightwrongdisplay").text("Sorry!");
+    timer = timer - 10;
+  });
+  // Click listener for Answer b with fucntionality to increase score by 1
   $(".answer-b-button").on("click", function () {
-             $(".rightwrongdisplay").text("Correct!")
-             currentScore++
-            nextQeustion()
-                console.log("correct")
-                console.log(currentScore)
-            });
+    $(".rightwrongdisplay").text("Correct!");
+    currentScore++;
+    nextQeustion();
+  });
+  // Click listener for Answer c with fucntionality to remove additional time from set interval
+  $(".answer-c-button").on("click", function () {
+    $(".rightwrongdisplay").text("Sorry!");
+    timer = timer - 10;
+  });
+  // Click listener for Answer c with fucntionality to remove additional time from set interval
+  $(".answer-d-button").on("click", function () {
+    $(".rightwrongdisplay").text("Sorry!");
+    timer = timer - 10;
+  });
 
-   $(".answer-c-button").on("click", function () {
-              $(".rightwrongdisplay").text("Sorry!")
-              timer = (timer-10)
-                console.log("wrong")
-            });
-        
-   $(".answer-d-button").on("click", function () {
-             $(".rightwrongdisplay").text("Sorry!")
-             timer = (timer-10)
-                console.log("wrong")
-            });
-            
-function nextQeustion () {
-       var question1 = "What does NBA  for 2?";
-            var answer1a = "National Basketball ";
-            var answer1b = "National Basketball ";
-            var answer1c = "Natural Basketball ";
-            var answer1d = "Natural Basketball ";
-            var correctAnswer1 = answer1d;  
+  // second question function with variables for question 2
+  function nextQeustion() {
+    var question1 = "Who won the 2020 NBA?";
+    var answer1a = "Boston ";
+    var answer1b = "Miami ";
+    var answer1c = "Denver ";
+    var answer1d = "Lakers ";
+    var correctAnswer1 = answer1d;
 
+    // Targeted HTML classes for displaying question 2
+    $(".card-header").text(question1);
+    $("#1-a").text(answer1a);
+    $("#1-b").text(answer1b);
+    $("#1-c").text(answer1c);
+    $("#1-d").text(answer1d);
 
-            
+    // Click listener for Answer a with fucntionality to remove additional time from set interval
+    $(".answer-a-button").on("click", function () {
+      $(".rightwrongdisplay").text("Sorry!");
+      timer = timer - 10;
+    });
+    // Click listener for Answer a with fucntionality to remove additional time from set interval
+    $(".answer-b-button").on("click", function () {
+      $(".rightwrongdisplay").text("Sorry!");
+      timer = timer - 10;
+    });
+    // Click listener for Answer c with fucntionality to remove additional time from set interval
+    $(".answer-c-button").on("click", function () {
+      $(".rightwrongdisplay").text("Sorry!");
+      timer = timer - 10;
+      console.log("wrong");
+    });
+    // Click listener for Answer b with fucntionality to increase score by 1
+    $(".answer-d-button").on("click", function () {
+      $(".rightwrongdisplay").text("Correct!");
+      currentScore++;
+      nextQeustion2();
+    });
+  }
+  // third question function with variables for question 3
+  function nextQeustion2() {
+    var question1 = "What is the Denver Nugget's mascot name?";
+    var answer1a = "National";
+    var answer1b = "National";
+    var answer1c = "Rocky  ";
+    var answer1d = "Bull Winkle";
+    var correctAnswer1 = answer1c;
 
-                $(".card-header").text(question1)
-                $("#1-a").text(answer1a)
-                $("#1-b").text(answer1b)
-                $("#1-c").text(answer1c)
-                $("#1-d").text(answer1d)
-                
-              $(".answer-a-button").on("click", function () {
-             $(".rightwrongdisplay").text("Sorry!")
-                timer = (timer-10)
-                console.log("wrong")
-            });
+    // Targeted HTML classes for displaying question 3
+    $(".card-header").text(question1);
+    $("#1-a").text(answer1a);
+    $("#1-b").text(answer1b);
+    $("#1-c").text(answer1c);
+    $("#1-d").text(answer1d);
+    // Click listener for Answer a with fucntionality to remove additional time from set interval
+    $(".answer-a-button").on("click", function () {
+      $(".rightwrongdisplay").text("Sorry!");
+      timer = timer - 10;
+      console.log("wrong");
+    });
 
-  $(".answer-b-button").on("click", function () {
-             $(".rightwrongdisplay").text("Sorry!")
-              timer = (timer-10)
-                console.log("wrong")
-             
-            });
+    $(".answer-b-button").on("click", function () {
+      $(".rightwrongdisplay").text("Sorry!");
+      timer = timer - 10;
+      console.log("wrong");
+    });
+    // Click listener for Answer c with fucntionality to increase score by 1
+    $(".answer-c-button").on("click", function () {
+      $(".rightwrongdisplay").text("Correct!");
+      currentScore++;
+      highScore();
+      console.log("correct");
+      console.log(currentScore);
+    });
 
-   $(".answer-c-button").on("click", function () {
-              $(".rightwrongdisplay").text("Sorry!")
-              timer = (timer-10)
-                console.log("wrong")
-            });
-        
-   $(".answer-d-button").on("click", function () {
-             $(".rightwrongdisplay").text("Correct!")
-              currentScore++
-            nextQeustion2()
-                console.log("correct")
-                console.log(currentScore)
-            });
-                
-}
+    // Click listener for Answer d with fucntionality to remove additional time from set interval
+    $(".answer-d-button").on("click", function () {
+      $(".rightwrongdisplay").text("Sorry!");
+      timer = timer - 10;
+      console.log("wrong");
+    });
+  }
 
-function nextQeustion2 () {
-       var question1 = "What does NBA  for 3?";
-            var answer1a = "National  ";
-            var answer1b = "National  ";
-            var answer1c = "Natural  ";
-            var answer1d = "Natural  ";
-            var correctAnswer1 = answer1c;  
+  // Function to take user into the high score screen with variable to display results
+  function highScore() {
+    var question1 = "Top 3 High Scores!";
+    var answer1a = "  ";
+    var answer1b = currentScore;
+    var answer1c = "  ";
+    var answer1d = "  ";
+    var letterd = "  ";
+    var correctAnswer1 = answer1c;
 
+    // Prompt to allow user to enter requested initials
+    userInitials = prompt("Enter your initials");
 
-                $(".card-header").text(question1)
-                $("#1-a").text(answer1a)
-                $("#1-b").text(answer1b)
-                $("#1-c").text(answer1c)
-                $("#1-d").text(answer1d)
+    // method for storing user current score to local storage
+    localStorage.setItem("Score", currentScore);
+    // method for storing users initials to local storage
+    localStorage.setItem("Initials", userInitials);
 
-            $(".answer-a-button").on("click", function () {
-             $(".rightwrongdisplay").text("Sorry!")
-                timer = (timer-10)
-                console.log("wrong")
-            });
+    // Targeted HTML classes for displaying top 3 high scores
+    $(".card-header").text(question1);
+    $("#1-a").text(answer1a);
+    $("#1-b").text(answer1b);
+    $("#1-c").text(answer1c);
+    $("#1-d").text(answer1d);
 
-  $(".answer-b-button").on("click", function () {
-             $(".rightwrongdisplay").text("Sorry!")
-              timer = (timer-10)
-                console.log("wrong")
-            });
-
-   $(".answer-c-button").on("click", function () {
-              $(".rightwrongdisplay").text("Correct!")
-              currentScore++
-              highScore()
-                console.log("correct")
-                console.log(currentScore)
-            });
-
-        
-   $(".answer-d-button").on("click", function () {
-             $(".rightwrongdisplay").text("Sorry!")
-             timer = (timer-10)
-                console.log("wrong")
-            });
-
-
-                
-}
-
-function highScore () {
-       var question1 = "Top 3 High Scores!";
-            var answer1a = "  ";
-            var answer1b = currentScore;
-            var answer1c = "  ";
-            var answer1d = "  ";
-            var letterd = "  ";
-            var correctAnswer1 = answer1c;  
-
-            
-
-            userInitials = prompt("Enter your initials")
-
-                $(".card-header").text(question1)
-                $("#1-a").text(answer1a)
-                $("#1-b").text(answer1b)
-                $("#1-c").text(answer1c)
-                $("#1-d").text(answer1d)
-
-                 $("#top-scores-3").text()
-                
-               
-
-                $("#high-score-a").text("You got the High Score!!!")
-                $("#high-score-b").text("# 1" + "-" + userInitials + " " + "Correct Answers:" + " " + currentScore )
-                $("#high-score-c").text("# 2" + "-" + "TCD")
-                $("#high-score-d").text("# 3" + "-" + "MJ")
-
-                console.log(currentScore)
-
-
-
-                
-
-           
-
-                
-}
-
-
-
-          
-
-
-          
-        }
-        
-
-        )
+    $("#high-score-a").text("You got the High Score!!!");
+    // currentScore = localStorage.getItem(currentScore)
+    $("#high-score-b").text(
+      "# 1" +
+        "-" +
+        localStorage.getItem(userInitials) +
+        " " +
+        "Correct Answers:" +
+        " " +
+        localStorage.getItem(currentScore)
+    );
+    $("#high-score-b").text(
+      "# 1" + "-" + userInitials + " " + "Correct Answers:" + " " + currentScore
+    );
+    $("#high-score-c").text("# 2" + "-" + "TCD");
+    $("#high-score-d").text("# 3" + "-" + "MJ");
+  }
+});

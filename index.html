@@ -5,10 +5,9 @@
     <meta charset="UTF-8">
     <title>Basketball Online Trivia</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="style.css">
     <!-- Bootstrap File -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-
+   <link rel="stylesheet" href="style.css">
 
 
     <!-- JQuery -->
@@ -35,6 +34,9 @@
             <div class="text-center">  <h2>Ball is life quiz vol. 1</h2>
             <!-- div to end h2 tag     -->
             </div>
+            <hr>
+            <div class="runTime"></div>
+            <div class="rightwrongdisplay"></div>
         <!-- div to end jumpotron element     -->
         </div>
 
@@ -49,15 +51,15 @@
                     <h4 class="card-header">What does NBA stand for?</h4>
                    
                    
-                    <!-- bootstrap styling for answer section -->
-                    <div class="card-body">
+                    <!-- User answer option for A-->
+                    <div id= "high-score-a" class="card-body">
                         <!-- div class for alignment of answer row -->
                         <div class="text-left">
                             <!-- bootstrap styling for button and user answer option for A-->
-                            <button class="btn btn-dark btn-lg normal-button">
+                            <button class="btn btn-dark btn-lg answer-a-button">
                                 <!-- bootstrap class for button with and defined button content for html -->
                                 <span class="answer"></span>A</button>
-                                <span>National Basketball Athletics</span>
+                                <span id= "1-a">National Basketball Athletics</span>
                                 <!-- bootstrap styling for button 2-->
                            
                         </div>
@@ -65,39 +67,39 @@
                 </div>
 
                 <!-- User answer option for B-->
-                <div id="visibilityControls" class="card">
+                <div id="high-score-b" class="card">
            
                     <div class="card-body">
                         <div class="text-left">
-                            <button class="btn btn-dark btn-lg vis-button">
+                            <button class="btn btn-dark btn-lg answer-b-button">
                                 <span class="answer"></span>B</button>
-                                <span>National Basketball Association</span>
+                                <span id="1-b">National Basketball Association</span>
                         
                         </div>
                     </div>
                 </div>
 
                 <!-- User answer option for C-->
-                <div id="cloneControls" class="card">
+                <div id="high-score-c" class="card">
                
                     <div class="card-body">
                         <div class="text-left">
-                            <button class="btn btn-dark btn-lg clone1-button">
-                                <span class="answer"></span>C</button>
-                                <span>Natural Basketball Association</span>
+                            <button class="btn btn-dark btn-lg answer-c-button">
+                                <span class="answer"></span id="top-scores-3">C</button>
+                                <span id="1-c">Natural Basketball Association</span>
       
                         </div>
                     </div>
                 </div>
 
                 <!-- User answer option for D -->
-                <div id="moveControls" class="card">
+                <div id="high-score-d" class="card">
 
                     <div class="card-body">
                         <div class="text-left">
-                            <button class="btn btn-dark btn-lg back-button">
+                            <button class="btn btn-dark btn-lg answer-d-button">
                                 <span class="answer"></span>D</button>
-                                <span>Natural Basketball Association</span>
+                                <span id="1-d">Natural Basketball Association</span>
                         </div>
                     </div>
                 </div>
@@ -107,7 +109,8 @@
         <!-- div to close class section div -->
     </div>
     
-   
+     <!-- tag for JS code segment -->
+<script src="script.js"></script>
 
 </body>
 

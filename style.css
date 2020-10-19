@@ -10,3 +10,12 @@
 .text-left {
   float: left;
 }
+.runTime {
+  padding-left: 50%;
+}
+.rightwrongdisplay {
+  padding-left: 50%;
+}
+.high-score-b {
+  float: right;
+}

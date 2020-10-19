@@ -20,11 +20,11 @@ $(document).ready(function () {
   var currentScore = 0;
   var userInitials;
   // variables for question 1
-  var question1 = "What does NBA stand for?";
-  var answer1a = "National Basketball Athletics";
-  var answer1b = "National Basketball Association";
-  var answer1c = "Natural Basketball Association";
-  var answer1d = "Natural Basketball Association";
+  var question1 = "What data types can variables be in Java?";
+  var answer1a = "PDF, JPG, GIF";
+  var answer1b = "Numbers, Strings, Booleans";
+  var answer1c = "Hours, Seconds, Minutes";
+  var answer1d = "Capital, Lower, Numbers";
   var correctAnswer1 = answer1b;
 
   // Targeted HTML classes for displaying question 1
@@ -58,11 +58,11 @@ $(document).ready(function () {
 
   // second question function with variables for question 2
   function nextQeustion() {
-    var question1 = "Who won the 2020 NBA?";
-    var answer1a = "Boston ";
-    var answer1b = "Miami ";
-    var answer1c = "Denver ";
-    var answer1d = "Lakers ";
+    var question1 = "What is the basic variable syntax for Java?";
+    var answer1a = "var 'name' = value;  ";
+    var answer1b = "var = name value; ";
+    var answer1c = "var = name value ";
+    var answer1d = "var name = value; ";
     var correctAnswer1 = answer1d;
 
     // Targeted HTML classes for displaying question 2
@@ -97,11 +97,11 @@ $(document).ready(function () {
   }
   // third question function with variables for question 3
   function nextQeustion2() {
-    var question1 = "What is the Denver Nugget's mascot name?";
-    var answer1a = "National";
-    var answer1b = "National";
-    var answer1c = "Rocky  ";
-    var answer1d = "Bull Winkle";
+    var question1 = "How is an object identified in Java?";
+    var answer1a = "Object =";
+    var answer1b = "[ ]";
+    var answer1c = "{ }";
+    var answer1d = "( )";
     var correctAnswer1 = answer1c;
 
     // Targeted HTML classes for displaying question 3

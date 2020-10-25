@@ -21,3 +21,7 @@ The chanllenges amoungst this build were setting the iterations through question
 4. Once all questions are answered end the quiz
    a. user must be able to save initials with their score
    b. If the timer runs to zero then end the quiz also allowing the user to save initials with their score
+
+![Java quiz 1](https://user-images.githubusercontent.com/69283624/97113884-d052a900-16b2-11eb-87bb-ce05aea1bdaa.PNG)
+
+![Java quiz 2](https://user-images.githubusercontent.com/69283624/97113887-d34d9980-16b2-11eb-9429-1a9f3246a4a9.PNG)

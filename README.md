@@ -2,7 +2,7 @@
 
 ## Description:
 
-This webpage hosts an online basketball quiz. This quiz has a timer that is inititated by the user. Once the quiz begins the user is presented with multiple choice answers to each question. When the user selects the wrong answer they are advised the selection was incorrect and a penalty of lost time on the timer is executed. The user can then select a different answer to the question. If the time runs out or the user successfully answers all three question, then the user is presented a prompt to enter their initials which will be persisted in local storage along with the users score.
+This webpage hosts an online Javascript quiz. This quiz has a timer that is inititated by the user. Once the quiz begins the user is presented with multiple choice answers to each question. When the user selects the wrong answer they are advised the selection was incorrect and a penalty of lost time on the timer is executed. The user can then select a different answer to the question. If the time runs out or the user successfully answers all three question, then the user is presented a prompt to enter their initials which will be persisted in local storage along with the users score.
 
 ### Challenges:
 
